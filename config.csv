@@ -1,0 +1,9 @@
++, StackInstruction$Add
+-, StackInstruction$Subtract
+*, StackInstruction$Multiply
+/, StackInstruction$Divide
+drop, StackInstruction$Drop
+rot, StackInstruction$Rotate
+swap, StackInstruction$Swap
+dup, StackInstruction$Duplicate
+
