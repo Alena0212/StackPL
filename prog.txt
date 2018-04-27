@@ -1,1 +1,2 @@
-2 3 + print
+5
+1 swap dup [ dup rot * swap 1 - dup ] drop print
