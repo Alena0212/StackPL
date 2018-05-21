@@ -1,9 +1,7 @@
 import StackInstruction.StackInstruction;
 import StackInstruction.Add;
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+
+import java.io.*;
 import java.util.HashMap;
 
 import static StackInstruction.StackInstruction.*;
@@ -14,10 +12,13 @@ public class StackInstructionFactory {
     StackInstructionFactory(){
         configMap = new HashMap<String, StackInstruction>();
         BufferedReader configFile = null;
+        InputStream resource = null;
         String line = null;
         String[] configNote = null;
         try {
-            configFile = new BufferedReader(new InputStreamReader(new FileInputStream("config.csv")));
+            resource = this.getClass().getResourceAsStream("config.csv");
+            configFile = new BufferedReader(new InputStreamReader(resource));
+            //configFile = new BufferedReader(new InputStreamReader(new FileInputStream("config.csv")));
 
             while ((line = configFile.readLine()) != null) {
                 configNote = line.split(",");

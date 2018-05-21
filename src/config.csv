@@ -1,0 +1,10 @@
++,StackInstruction.Add
+-,StackInstruction.Subtract
+*,StackInstruction.Multiply
+/,StackInstruction.Divide
+<,StackInstruction.IfLess
+drop,StackInstruction.Drop
+rot,StackInstruction.Rotate
+swap,StackInstruction.Swap
+dup,StackInstruction.Duplicate
+print,StackInstruction.Print
